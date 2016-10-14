@@ -1,0 +1,6 @@
+*.pyc
+.pypirc
+*.egg-info
+dist
+tariff_russianpost.egg-info
+dist
