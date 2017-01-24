@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='tariff-russianpost',
-    version='0.0.1',
+    name='tariff_russianpost',
+    version='1.0.0',
     packages=find_packages(),
     author='Dmitry Kalinin',
     author_email='vladimirovich@pbrf.ru',
