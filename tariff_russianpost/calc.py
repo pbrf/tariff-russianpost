@@ -7,7 +7,7 @@ import urllib2
 
 class TariffRussianpost:
 
-   def __init__(self):
+    def __init__(self):
         self.url = 'http://tariff.russianpost.ru/tariff/v1/'
 
     def calc(self, data):
