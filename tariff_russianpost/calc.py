@@ -20,12 +20,11 @@ class TariffRussianpost:
         if data['sum_num']:
             sum_num = data['sum_num']
         sumoc = data['Value']
-        isavia = data['isavia']
         index_from = data['index_from']
         index_to = data['index_to']
         closed = 1
         service = data['service']
-        response_raw = urllib2.urlopen('{0}calculate?json&typ={1}&cat={2}&dir={3}&weight={4}&date={5}&sumoc={6}&from={7}&to={8}&isavia={9}&closed={10}&service={11}'
+        response_raw = urllib2.urlopen('{0}calculate?json&typ={1}&cat={2}&dir={3}&weight={4}&date={5}&sumoc={6}&from={7}&to={8}&closed={9}&service={10}'
                                        .format(self.url,
                                                typ,
                                                cat,
@@ -35,12 +34,10 @@ class TariffRussianpost:
                                                sumoc,
                                                index_from,
                                                index_to,
-                                               isavia,
                                                closed,
                                                service)).read()
         response = json.loads(response_raw.decode('utf-8'))
-        response_cost = response['paynds']
-        return response_cost
+        return response
 
     def category_list(self):
         response_raw = urllib2.urlopen('{0}dictionary?json&category=all'.format(self.url)).read()
